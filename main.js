@@ -64,7 +64,7 @@ app.put('/canciones/:id', (req,res) => {
         fs.writeFileSync('canciones.json', JSON.stringify(canciones))
         res.json({ mensaje: 'Canción editada!.' })
     } catch (error) {
-        res.status(500).json({mensaje:'No se pudo borrar la canción',error:error.message})
+        res.status(500).json({mensaje:'No se pudo editar la canción',error:error.message})
     }
 })
 
